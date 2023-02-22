@@ -143,7 +143,7 @@ footer {
 .welcome 
 .welcome-section
 .leafs {
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/picturs/leafs.png);
+    background-image: url(../img/picturs/leafs.png);
     background-repeat: no-repeat;
     width: 450px;
     height: 410px;
@@ -269,7 +269,7 @@ footer {
 .about 
 .about-section
 .about-picture {
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/picturs/houseplant1.png);
+    background-image: url(../img/picturs/houseplant1.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 38%;
@@ -407,7 +407,7 @@ footer {
 .service-pictures 
 .service-item 
 .block-1 {
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/service/first.png);
+    background-image: url(../img/service/first.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
@@ -419,7 +419,7 @@ footer {
 .service-pictures 
 .service-item 
 .block-2 {
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/service/second.png);
+    background-image: url(../img/service/second.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
@@ -431,7 +431,7 @@ footer {
 .service-pictures 
 .service-item 
 .block-3 {
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/service/three.png);
+    background-image: url(../img/service/three.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
@@ -443,7 +443,7 @@ footer {
 .service-pictures 
 .service-item 
 .block-4 {
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/service/four.png);
+    background-image: url(../img/service/four.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
@@ -455,7 +455,7 @@ footer {
 .service-pictures 
 .service-item 
 .block-5 {
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/service/five.png);
+    background-image: url(../img/service/five.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
@@ -467,7 +467,7 @@ footer {
 .service-pictures 
 .service-item 
 .block-6 {
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/service/six.png);
+    background-image: url(../img/service/six.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
@@ -681,7 +681,7 @@ footer {
 
     appearance: none;  
 
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/buttom/accordion_btn.svg); 
+    background-image: url(../img/buttom/accordion_btn.svg); 
     background-repeat: no-repeat, repeat;
     background-position: right 2em top 62%, 0 0;
     background-size: .90em auto, 100%; 
@@ -716,7 +716,7 @@ footer {
     line-height: 20px;
     margin: 16px 0px 12px;
 
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/buttom/accordion_btn_open.svg);
+    background-image: url(../img/buttom/accordion_btn_open.svg);
     background-repeat: no-repeat, repeat;
     background-position: right 0em top 50%, 0 0;
     background-size: .90em auto, 100%; 
@@ -790,7 +790,7 @@ footer {
     line-height: 20px;
     margin: 16px 0px 12px;
 
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/buttom/accordion_btn_open.svg);
+    background-image: url(../img/buttom/accordion_btn_open.svg);
     background-repeat: no-repeat, repeat;
     background-position: right 0em top 50%, 0 0;
     background-size: .90em auto, 100%; 
@@ -840,7 +840,7 @@ footer {
     line-height: 20px;
     margin: 16px 0px 12px;
 
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/buttom/accordion_btn_open.svg);
+    background-image: url(../img/buttom/accordion_btn_open.svg);
     background-repeat: no-repeat, repeat;
     background-position: right 0em top 50%, 0 0;
     background-size: .90em auto, 100%; 
@@ -946,7 +946,7 @@ footer {
 .prices-wrapper 
 .prices-block-right
 .price-image {
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/picturs/leafs-in-contact.png);
+    background-image: url(../img/picturs/leafs-in-contact.png);
     background-repeat: no-repeat;
 
     width: 152px;
@@ -982,7 +982,7 @@ footer {
 .contacts
 .background-in-contacts
 .contacts-image {
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/picturs/contact_woman1.png);
+    background-image: url(../img/picturs/contact_woman1.png);
     background-repeat: no-repeat;
     background-size: 87% 100%;
     width: 100%;
@@ -1046,7 +1046,7 @@ footer {
     
     appearance: none;  
 
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/buttom/drop_btn_close.svg); 
+    background-image: url(../img/buttom/drop_btn_close.svg); 
     background-repeat: no-repeat, repeat;
     background-position: right 2em top 50%, 0 0;
     background-size: .90em auto, 100%; 
@@ -1070,7 +1070,7 @@ footer {
     border-radius: 0px;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
 
-    background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/buttom/drop_btn_open.svg); 
+    background-image: url(../img/buttom/drop_btn_open.svg); 
     background-repeat: no-repeat, repeat;
     background-position: right 2em top 50%, 0 0;
     background-size: .90em auto, 100%;
@@ -1476,7 +1476,7 @@ footer {
     .welcome 
     .welcome-section
     .leafs {
-        background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/picturs/leafs768.png);
+        background-image: url(../img/picturs/leafs768.png);
         background-repeat: no-repeat;
         width: 43%;
         height: 16em;
@@ -1563,7 +1563,6 @@ footer {
     .about 
     .about-section
     .about-picture {
-        background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/picturs/houseplant1\(768px\).png);
         background-repeat: no-repeat;
         width: 37%;
         height: 16em;

@@ -242,7 +242,3 @@ nav.addEventListener('click', function(){
     burgerBtn.classList.toggle('active');
     nav.classList.toggle('active');
 });
-
-
-
-console.log("1) Blur +40 (можно нажать все три кнопки)\n2) При нажатии на 'order' аккардион закрывается +35\n3) Все работает +25");   
