@@ -472,6 +472,7 @@ footer {
 
     border: 1px solid #E3E1D5;
     border-radius: 20px;
+    margin-top: 60px;
 }
 
 .prices-items {
@@ -481,6 +482,7 @@ footer {
 
     width: 72%;
     margin: 5px auto 35px;
+    
 } 
  
 .price-item {
@@ -701,6 +703,7 @@ footer {
 /* Open items in the price section*/
 
 .prices-block-right {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -756,6 +759,8 @@ footer {
 }
 
 .price-image {
+    position: absolute;
+    top: 193px;
     background-image: url(/mat-kon-JSFEPRESCHOOL2022Q4/plants/img/picturs/leafs-in-contact.png);
     background-repeat: no-repeat;
 
@@ -1300,7 +1305,7 @@ footer {
 
     .prices-item {
         width: 96%;
-        margin: 0px 18px 70px;
+        margin: 42px 18px 70px;
     }
 
     .prices-items {
@@ -1353,7 +1358,8 @@ footer {
     }
 
     .price-image {
-        margin: 30px 15px 0px;
+        top: 140px;
+        right: 13px;
     }
 
     .contacts {
@@ -2097,7 +2103,7 @@ footer {
         margin: 8px auto;
     }
 
-    .data-github {
+    .footer-content .data-github {
         width: 70%;
     }
 
@@ -2105,11 +2111,11 @@ footer {
         margin: -11px 0px 0px;
     }
 
-    .social-list {
+    .footer-content .social-list {
         width: 62%;
     }
 
-    .social-list ul {
+    .footer-content .social-list ul {
         padding: 0px;
     }
 

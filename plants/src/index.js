@@ -174,7 +174,6 @@ const addHandlerCityInContact = () => {
         const button = event.target;
         closedSelectorContactUs();
         openingCityCard(button.id);
-        console.log(button.id);
     })
 }
 
