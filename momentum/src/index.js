@@ -1,6 +1,7 @@
 window.onload = function() {
     getTimeOfDay(showHours());
     showDuration();
+    audio.src = playList[playNum].src;
 }
 import playList from './playList.js';
 //Add time
@@ -270,11 +271,10 @@ const removeIndicatesWhatIsPlay = () => {
 }
 
 const playAudio = () => {
-        audio.src = playList[playNum].src;
-        audioName.textContent = playList[playNum].title;
-        audio.currentTime = 0;
-        audio.play();
+    audioName.textContent = playList[playNum].title;
+    audio.play();
 }
+
 const stopAudio = () => {
     audio.pause();
 }
@@ -295,12 +295,13 @@ const setPauseIcon = () => {
 }
 
 const progressTime = () => {
-    setInterval(() => {
+    audio.addEventListener('timeupdate', () => {
         const progressBar = document.querySelector(".progress");
         progressBar.style.width = audio.currentTime / audio.duration * 100 + "%";
-        document.querySelector('.start-music').textContent = getTimeCodeFromNum(audio.currentTime);
-    }, 500);
+        document.querySelector('.start-music').textContent = getTimeCodeFromNum(audio.currentTime)
+    })
 }
+
 
 /*Play/Stop music with one button*/
 playStopAudio.addEventListener('click', (event) => {
@@ -308,13 +309,12 @@ playStopAudio.addEventListener('click', (event) => {
 
     if (event.target.className === 'btn-audio play-stop-audio active') {
         addIndicatesWhatIsPlay();
-        playAudio(playNum);
+        playAudio();
         progressTime();
     }
     if (event.target.className === 'btn-audio play-stop-audio') {
         stopAudio();
         removeIndicatesWhatIsPlay();
-        timeAudio.textContent = '0:00';
         clearInterval(progressTime)
     }
 });
@@ -332,7 +332,6 @@ document.querySelectorAll('.play-stop-track').forEach(element => {
             if(!element.classList.contains('active')){
                 stopAudio();
                 removeIndicatesWhatIsPlay();
-                timeAudio.textContent = '0:00';
             }
         })
     });
@@ -358,10 +357,8 @@ const playNext = () => {
     if (playNum >= playList.length) {
         playNum = 0;
         audio.src = playList[playNum].src;
-        audio.currentTime = 0;
     }
     audio.src = playList[playNum].src;
-    audio.currentTime = 0;
     audio.play();
     addIndicatesWhatIsPlay();
 }
@@ -371,15 +368,12 @@ const playPrev = () => {
     if (playNum < 0) {
         playNum = playList.length - 1;
         audio.src = playList[playNum].src;
-        audio.currentTime = 0;
     }
     if (playNum === 0) {
         audio.src = playList[playNum].src;
-        audio.currentTime = 0;
     }
     if (playNum > 0) {
         audio.src = playList[playNum].src;
-        audio.currentTime = 0;
     }
     audio.play();
     addIndicatesWhatIsPlay();
