@@ -1,5 +1,4 @@
 window.onload = function() {
-    
     getTimeOfDay(showHours());
     showTime();
     showDuration();
@@ -11,7 +10,7 @@ const time = document.querySelector('.time');
 const showTime = () => {
     const date = new Date();
     const currentTime = date.toLocaleTimeString();
-    
+
     time.textContent = currentTime;
     showDate();
     getTimeOfDay(showHours());
@@ -44,7 +43,7 @@ const showHours = () => {
 const getTimeOfDay = (hours) => {
     if (6 <= hours && hours < 12) {
         return 'morning'
-    } 
+    }
     if (12 <= hours && hours < 18) {
         return 'afternoon'
     }
@@ -91,9 +90,9 @@ let timeOfDay = getTimeOfDay(showHours());
 const getBg = (timeOfDay, num) => {
     num = String(num);
     num = num.padStart(2, '0');
-    
+
     switch (timeOfDay) {
-        case 'morning': 
+        case 'morning':
             return `https://github.com/Mat-Kon/stage1-tasks/blob/assets/images/morning/${num}.jpg?raw=true`;
         case 'afternoon':
             return `https://github.com/Mat-Kon/stage1-tasks/blob/assets/images/afternoon/${num}.jpg?raw=true`;
@@ -101,15 +100,15 @@ const getBg = (timeOfDay, num) => {
             return `https://github.com/Mat-Kon/stage1-tasks/blob/assets/images/evening/${num}.jpg?raw=true`;
         case 'night':
             return `https://github.com/Mat-Kon/stage1-tasks/blob/assets/images/night/${num}.jpg?raw=true`; 
-    }    
+    }
 }
 
 const setBg = (timeOfDay, num) => {
     const img = new Image();
     img.src = getBg(timeOfDay,num);
-    img.onload = () => {      
+    img.onload = () => {
     body.style.backgroundImage = `url(${img.src})`;
-  }; 
+  };
 }
 setBg(timeOfDay, bgNum);
 
@@ -140,7 +139,7 @@ slidePrev.addEventListener('click', event => {
         setSlidePrev();
 });
 
-// add weather widget 
+// add weather widget
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
 const weatherDescription = document.querySelector('.weather-description');
@@ -149,7 +148,7 @@ const windSpeed = document.querySelector('.wind');
 const humidity = document.querySelector('.humidity');
 const cityName = document.querySelector('.city');
 
-async function getWeather(city) {  
+async function getWeather(city) {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=en&appid=0380bab79ebe14975ff3341abbe0c56c&units=metric`;
     const res = await fetch(url);
     const data = await res.json();
@@ -184,14 +183,14 @@ cityName.addEventListener('change', (event) => {
         // errorWeather();
     }
     getWeather(event.target.value);
-    
+
 })
 
 //Quote widget
 const quote = document.querySelector('.quote');
 const author = document.querySelector('.author');
-    
-async function getQuotes(num) {  
+
+async function getQuotes(num) {
     const quotes = 'src/data.json';
     const res = await fetch(quotes);
     const data = await res.json();
@@ -221,7 +220,7 @@ const addAudioName = (num) => {
     const li = document.createElement('li');
     li.classList.add('play-item');
     li.length = playList.length;
-    li.textContent = playList[num].title;    
+    li.textContent = playList[num].title;
     playListContainer.append(li);
     playListContainer.append()
 }
@@ -232,7 +231,7 @@ const addButtonsPlayStopForPlaylist = (num) => {
 }
 for (let i = 0; i < playList.length; i++) {
     addButtonsPlayStopForPlaylist(i);
-    addAudioName(i); 
+    addAudioName(i);
 }
 
 
@@ -248,7 +247,7 @@ function getTimeCodeFromNum(num) {
     seconds -= minutes * 60;
     const hours = parseInt(minutes / 60);
     minutes -= hours * 60;
-  
+
     if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
     return `${String(hours).padStart(2, 0)}:${minutes}:${String(
       seconds % 60
@@ -336,7 +335,7 @@ document.querySelectorAll('.play-stop-track').forEach(element => {
                 stopAudio();
                 removeIndicatesWhatIsPlay();
                 timeAudio.textContent = '0:00';
-            }        
+            }
         })
     });
 })
@@ -363,7 +362,7 @@ const playNext = () => {
         audio.currentTime = 0;
     }
     audio.src = playList[playNum].src;
-    audio.currentTime = 0;  
+    audio.currentTime = 0;
     audio.play();
     addIndicatesWhatIsPlay();
 }
@@ -383,7 +382,7 @@ const playPrev = () => {
         audio.src = playList[playNum].src;
         audio.currentTime = 0;
     }
-    audio.play();    
+    audio.play();
     addIndicatesWhatIsPlay();
 }
 
@@ -401,21 +400,3 @@ prevMusic.addEventListener('click', event => {
     progressTime();
     audioName.textContent = playList[playNum].title;
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
