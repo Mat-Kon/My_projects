@@ -1,6 +1,5 @@
 window.onload = function() {
     getTimeOfDay(showHours());
-    showTime();
     showDuration();
 }
 import playList from './playList.js';
@@ -10,12 +9,11 @@ const time = document.querySelector('.time');
 const showTime = () => {
     const date = new Date();
     const currentTime = date.toLocaleTimeString();
-
+    showDate()
     time.textContent = currentTime;
-    showDate();
     getTimeOfDay(showHours());
-    setTimeout(showTime, 1000);
 }
+setInterval(showTime, 1000);
 
 //Add date
 const dateToDay = document.querySelector('.date');
@@ -24,7 +22,7 @@ dateToDay.textContent = '';
 const showDate = () => {
     const date = new Date();
     const options = {weekday: 'long', day: 'numeric', month: 'long'};
-    const currentDate = date.toLocaleDateString('en-US', options);
+    const currentDate = date.toLocaleDateString('ru', options);
     dateToDay.textContent = currentDate;
 }
 
@@ -36,7 +34,6 @@ greeting.textContent = '';
 const showHours = () => {
     const date = new Date();
     const hours = date.getHours();
-    setTimeout(showHours, 1000);
     return hours
 }
 
@@ -318,6 +315,7 @@ playStopAudio.addEventListener('click', (event) => {
         stopAudio();
         removeIndicatesWhatIsPlay();
         timeAudio.textContent = '0:00';
+        clearInterval(progressTime)
     }
 });
 /*Play/stop music with button track*/
@@ -347,6 +345,7 @@ timeline.addEventListener('click', event => {
     const timeToSeek = event.offsetX / parseInt(time) * audio.duration;
     audio.currentTime = timeToSeek;
 })
+
 /*Music switching*/
 const nextMusic = document.querySelector('.next-audio');
 const prevMusic = document.querySelector('.prev-audio');
@@ -400,3 +399,7 @@ prevMusic.addEventListener('click', event => {
     progressTime();
     audioName.textContent = playList[playNum].title;
 });
+
+
+
+
